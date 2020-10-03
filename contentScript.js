@@ -1,0 +1,4 @@
+let script = "window.onload = function() {document.body.parentNode.replaceChild(document.body.cloneNode(true), document.body);let elem = document.createElement('style');elem.append(':not(input):not(textarea), img{user-select:auto!important;}');document.body.appendChild(elem);window.removeEventListener('keyup',wpccpDisableKeys);window.removeEventListener('keydown',wpccpDisableKeys);window.removeEventListener('keydown',wpccpDisableCtrlActions);window.removeEventListener('keyup',wpccpDisableCtrlActions);};";
+let scriptTag = document.createElement('script');
+scriptTag.innerHTML = script;
+document.head.appendChild(scriptTag);
