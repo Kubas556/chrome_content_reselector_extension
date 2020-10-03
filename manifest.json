@@ -15,6 +15,10 @@
       "32": "icon32.png"
     }
   },
+  "externally_connectable": {
+    "matches": ["*://*.rozbor-dila.cz/*"]
+  },
+  "web_accessible_resources": ["icon32.png"],
   "content_scripts": [
     {
       "matches": ["https://rozbor-dila.cz/*"],
