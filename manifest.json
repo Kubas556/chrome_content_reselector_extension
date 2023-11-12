@@ -27,7 +27,8 @@
     "content_scripts": [
         {
             "matches": ["https://rozbor-dila.cz/*"],
-            "run_at": "document_end",
+            "run_at": "document_idle",
+            "world": "MAIN",
             "js": ["contentScript.js"]
         }
     ]
