@@ -1,29 +1,34 @@
 {
-  "name": "Content reselect",
-  "version": "1.0",
-  "description": "Enable content to be selected on rozbor-dila.cz",
-  "manifest_version": 2,
-  "icons": {
-    "16": "icon16.png",
-    "24": "icon24.png",
-    "32": "icon32.png"
-  },
-  "browser_action": {
-    "default_icon": {
-      "16": "icon16.png",
-      "24": "icon24.png",
-      "32": "icon32.png"
-    }
-  },
-  "externally_connectable": {
-    "matches": ["*://*.rozbor-dila.cz/*"]
-  },
-  "web_accessible_resources": ["icon32.png"],
-  "content_scripts": [
-    {
-      "matches": ["https://rozbor-dila.cz/*"],
-      "run_at": "document_end",
-      "js": ["contentScript.js"]
-    }
-  ]
+    "name": "Content reselect",
+    "version": "1.0",
+    "description": "Enable content to be selected on rozbor-dila.cz",
+    "manifest_version": 3,
+    "icons": {
+        "16": "icon16.png",
+        "24": "icon24.png",
+        "32": "icon32.png"
+    },
+    "action": {
+        "default_icon": {
+            "16": "icon16.png",
+            "24": "icon24.png",
+            "32": "icon32.png"
+        }
+    },
+    "externally_connectable": {
+        "matches": ["*://*.rozbor-dila.cz/*"]
+    },
+    "web_accessible_resources": [
+        {
+            "resources": ["icon32.png"],
+            "matches": ["*://*.rozbor-dila.cz/*"]
+        }
+    ],
+    "content_scripts": [
+        {
+            "matches": ["https://rozbor-dila.cz/*"],
+            "run_at": "document_end",
+            "js": ["contentScript.js"]
+        }
+    ]
 }
